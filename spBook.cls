@@ -106,7 +106,10 @@
     \newtheorem{definition}{Definition}[section]
     \newtheorem{definition-theorem}{Definition-Theorem}[section]
     \newtheorem{definition-proposition}{Definition-Proposition}[section]
+    \newtheorem{assumption}{Assumption}[section]
     \newtheorem{hypothesis}{Hypothesis}[section]
+    \newtheorem{postulate}{Postulate}[section]
+    \newtheorem{axiom}{Axiom}[section]
     \newtheorem{conjecture}{Conjecture}[section]
 
     \theorembodyfont{\normalfont}
@@ -130,7 +133,10 @@
     \newtheorem{definition}{定义}[section]
     \newtheorem{definition-theorem}{定义--定理}[section]
     \newtheorem{definition-proposition}{定义--命题}[section]
+    \newtheorem{assumption}{假定}[section]
     \newtheorem{hypothesis}{假设}[section]
+    \newtheorem{postulate}{原理}[section]
+    \newtheorem{axiom}{公设}[section]
     \newtheorem{conjecture}{猜想}[section]
 
     \theorembodyfont{\normalfont}
@@ -162,7 +168,7 @@
     }}}{%
         \end{old#1}
 }}
-\forcsvlist{\addOneOptionToEnvironment}{definition, theorem, corollary, lemma, proposition, definition-theorem, definition-proposition, hypothesis, conjecture, example, remark, convention, exercise, proof}
+\forcsvlist{\addOneOptionToEnvironment}{definition, theorem, corollary, lemma, proposition, definition-theorem, definition-proposition, hypothesis, conjecture, example, remark, convention, exercise, proof, assumption, postulate, axiom}
 \newcommand{\defineIndexedEnvironment}[1]{%
     \AtEndEnvironment{#1}{%
         \ifcsname #1name\endcsname
@@ -174,7 +180,7 @@
             \relax
         \fi
 }}
-\forcsvlist{\defineIndexedEnvironment}{definition, theorem, corollary, lemma, proposition, definition-theorem, definition-proposition, hypothesis, conjecture, example, remark, convention, exercise, proof}
+\forcsvlist{\defineIndexedEnvironment}{definition, theorem, corollary, lemma, proposition, definition-theorem, definition-proposition, hypothesis, conjecture, example, remark, convention, exercise, proof, assumption, postulate, axiom}
 
 
 \if@sp@colorbox
@@ -219,6 +225,9 @@
     \tcbsetColor{tudelft-roze}{corollary}
     \tcbsetColor{tudelft-rood}{lemma}
     \tcbsetColor{tudelft-donkerblauw}{proposition}
+    \tcbsetColor{tudelft-donkergrijs}{assumption}
+    \tcbsetColor{tudelft-oranje}{postulate}
+    \tcbsetColor{tudelft-bordeaux}{axiom}
 \fi
 
 
