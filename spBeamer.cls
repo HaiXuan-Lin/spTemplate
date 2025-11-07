@@ -56,8 +56,8 @@
 \RequirePackage{amsmath, amssymb, amsthm, amsfonts, mathtools, esint, yhmath, cancel, tensor, physics, mhchem, chemfig, xcolor, xkcdcolors, graphicx, pgfplots, tabularx, float, cuted, tikz, tikz-cd, circuitikz, array, pdfpages, lipsum, fancyvrb, refcount, multicol, hyperref}
 \pgfplotsset{compat=1.18}
 \IfStrEq{\@sp@lang}{cn}{%
-\ifxetex\RequirePackage{xeCJK}\fi
-\ifpdf\RequirePackage{ctex}\fi
+    \ifxetex\RequirePackage{xeCJK}\fi
+    \ifpdf\RequirePackage{ctex}\fi
 }{\relax}
 \newcommand{\song}{\CJKfamily{song}}
 \usetikzlibrary{backgrounds, tikzmark, decorations.markings, arrows, arrows.meta, shapes, calc, patterns, bending}
@@ -273,13 +273,13 @@
 \AtEndPreamble{%
   \IfStrEq{\@sp@lang}{cn}{\hypersetup{CJKbookmarks=true}}{\hypersetup{CJKbookmarks=false}}
   \hypersetup{%
-      pdfpagelabels = true,
+      % pdfpagelabels = true,
       breaklinks = true,
       unicode = true,
       pdfauthor = {\@sp@author},
       pdftitle = {\@sp@title},
       pdfkeywords = {spArticle},
-      bookmarks = true,
+      % bookmarks = true,
       bookmarksopen = true,
       colorlinks = true,
       linkcolor = .,
