@@ -1,11 +1,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% spBook
+% spBeamer
 %
 % Github:
-% https://github.com/SweetPastry/spTemplate
+% https://github.com/HaiXuan-Lin/spTemplate
 %
 % Authors:
-% Sweet Pastry (SweetPastryLHX@gmail.com)
+% Haixuan Lin (haixuan.lin2005@gmail.com)
 %
 % License:
 % CC BY 4.0
@@ -13,7 +13,7 @@
 
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{spBook}[2025/05/27 version: 1.03.06, Author: Sweet Pastry]
+\ProvidesClass{spBook}[2025/05/27 version: 1.03.07, Author: Haixuan Lin]
 
 
 \RequirePackage{kvoptions, etoolbox, xstring, xparse, ifthen}

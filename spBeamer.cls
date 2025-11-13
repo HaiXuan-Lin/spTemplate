@@ -2,10 +2,10 @@
 % spBeamer
 %
 % Github:
-% https://github.com/SweetPastry/spTemplate
+% https://github.com/HaiXuan-Lin/spTemplate
 %
 % Authors:
-% Sweet Pastry (SweetPastryLHX@gmail.com)
+% Haixuan Lin (haixuan.lin2005@gmail.com)
 %
 % License:
 % CC BY 4.0
@@ -13,7 +13,7 @@
 
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{spBeamer}[2025/07/22 version: 1.03.07, Author: Sweet Pastry]
+\ProvidesClass{spBeamer}[2025/11/13 version: 1.04.01, Author: Haixuan Lin]
 
 
 \RequirePackage{kvoptions, etoolbox, xstring}
@@ -41,7 +41,10 @@
 
 
 \LoadClass[aspectratio=43]{beamer}
+\setbeamertemplate{caption}[numbered]
 \setbeamertemplate{frametitle continuation}{}
+\renewcommand{\thefootnote}{\arabic{footnote}}
+\renewcommand{\thempfootnote}{\arabic{mpfootnote}}
 \setlength{\parskip}{15pt}
 
 
@@ -66,12 +69,12 @@
     {palatino}        {\let\mathscr\relax\let\widering\relax\RequirePackage{newpxmath}}
     {fourier}         {\let\widering\relax\RequirePackage{fourier}}
     {fouriernc}       {\let\widering\relax\RequirePackage{fouriernc}}
-    {times}           {\let\widering\relax\RequirePackage{newtxmath}}
+    {times}           {\let\widering\relax\RequirePackage{newtxmath}\DeclareSymbolFont{orilargesymbols}{OMX}{cmex}{m}{n}\DeclareMathSymbol{\orisum}{\mathop}{orilargesymbols}{"50}\renewcommand\sum\orisum}
     {arev}            {\RequirePackage{arev}}
     {design}          {\RequirePackage{mathdesign}}
     {cmbridge}        {\RequirePackage{cmbright}}
     {k}               {\RequirePackage{kmath}}
-    {ptmx}            {\RequirePackage{mathptmx}}
+    {ptmx}            {\RequirePackage{mathptmx, bm}\let\boldsymbol\bm}
     {euler}           {\let\widering\relax\RequirePackage{eulerpx}}
     {newtx}           {\let\widering\relax\RequirePackage{newtxmath, newtxtext}}
 }[\PackageError{spArticle}{Math font \@sp@mathfont not found!}{Use other.}]

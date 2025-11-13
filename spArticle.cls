@@ -1,11 +1,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% spArticle
+% spBeamer
 %
 % Github:
-% https://github.com/SweetPastry/spTemplate
+% https://github.com/HaiXuan-Lin/spTemplate
 %
 % Authors:
-% Sweet Pastry (SweetPastryLHX@gmail.com)
+% Haixuan Lin (haixuan.lin2005@gmail.com)
 %
 % License:
 % CC BY 4.0
@@ -13,7 +13,7 @@
 
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{spArticle}[2025/03/018 version: 1.03.05, Author: Sweet Pastry]
+\ProvidesClass{spArticle}[2025/03/018 version: 1.03.06, Author: Haixuan Lin]
 
 
 \RequirePackage{kvoptions, etoolbox, xstring, ifxetex, ifpdf}
