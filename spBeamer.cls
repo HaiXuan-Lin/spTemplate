@@ -13,7 +13,7 @@
 
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{spBeamer}[2025/11/13 version: 1.04.01, Author: Haixuan Lin]
+\ProvidesClass{spBeamer}[2026/06/26 version: 1.04.02, Author: Haixuan Lin]
 
 
 \RequirePackage{kvoptions, etoolbox, xstring}
@@ -51,7 +51,7 @@
 \newcommand{\spTitle}[1]{\def\@sp@title{#1}}
 \newcommand{\spSubtitle}[1]{\def\@sp@subtitle{#1}}
 \newcommand{\spAuthor}[2][\@sp@author]{\def\@sp@author{#2}\def\@sp@authorinshort{#1}}
-\newcommand{\spAffiliation}[2][\@sp@affiliation]{\def\@sp@affiliation{#2}\def\@sp@affiliationinshort{#1}}
+  \newcommand{\spAffiliation}[2][\@sp@affiliation]{\def\@sp@affiliation{#2}\def\@sp@affiliationinshort{#1}}
 \newcommand{\spDate}[1]{\def\@sp@date{#1}}
 
 
@@ -63,7 +63,7 @@
     \ifpdf\RequirePackage{ctex}\fi
 }{\relax}
 \newcommand{\song}{\CJKfamily{song}}
-\usetikzlibrary{backgrounds, tikzmark, decorations.markings, arrows, arrows.meta, shapes, calc, patterns, bending}
+\usetikzlibrary{backgrounds, tikzmark, decorations.markings, arrows, arrows.meta, shapes, calc, patterns, bending, positioning, shapes.geometric}
 \IfStrEqCase{\@sp@mathfont}{%
     {undefined}       {\relax}
     {palatino}        {\let\mathscr\relax\let\widering\relax\RequirePackage{newpxmath}}
@@ -308,18 +308,16 @@
 
 
 \makeatletter
-\AddToHook{begindocument/end}{%
-  \frame{\titlepage}
-  \begin{frame}[label=content]{\IfStrEq{\@sp@lang}{en}{Summary}{\IfStrEq{\@sp@lang}{cn}{目录}{Summary}}}
-    \hypertarget{toc}{}
-    \begin{multicols}{2}
-      \tableofcontents
-    \end{multicols}
-  \end{frame}
-  }
-  \AtBeginDocument{%
-    \bookmark[dest=toc,level=2]{\sp@tocname}
-}
+    \AddToHook{begindocument/end}{%
+      \frame{\titlepage}
+      \begin{frame}[label=content]{\IfStrEq{\@sp@lang}{en}{Summary}{\IfStrEq{\@sp@lang}{cn}{目录}{Summary}}}
+        \hypertarget{toc}{}
+        \begin{multicols}{2}
+          \tableofcontents
+        \end{multicols}
+      \end{frame}
+      \bookmark[dest=toc,level=2]{\sp@tocname}
+    }
 \makeatother
 
 
