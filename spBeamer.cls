@@ -13,7 +13,7 @@
 
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{spBeamer}[2026/06/26 version: 1.04.02, Author: Haixuan Lin]
+\ProvidesClass{spBeamer}[2026/09/01 version: 1.04.03, Author: Haixuan Lin]
 
 
 \RequirePackage{kvoptions, etoolbox, xstring}
@@ -92,7 +92,7 @@
 
 
 \RequirePackage{xurl}
-\RequirePackage[backend=biber, style=\@sp@bibstyle]{biblatex}
+\RequirePackage[backend=biber, sorting=none, style=\@sp@bibstyle]{biblatex}
 \AtEndPreamble{%
   \IfEndWith{\@sp@ref}{.bib}{%
     \addbibresource{\@sp@ref}
